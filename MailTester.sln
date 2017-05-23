@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{A1B33A08-0999-43F9-8DC6-226BDAEA01C4}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MailTester", "MailTester\MailTester.fsproj", "{B308305A-5B16-4EFF-8E7A-43B2CBD454AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2C884A6-3252-47E8-8394-6AA02CFD6A92}"
+	ProjectSection(SolutionItems) = preProject
+		build.cmd = build.cmd
+		build.fsx = build.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{88779E4D-6097-44B3-ACDF-417C3D5D042C}"
+ProjectSection(SolutionItems) = preProject
+	Deployment\deploy.nuspec = Deployment\deploy.nuspec
+	Deployment\deployService.fsx = Deployment\deployService.fsx
+	Deployment\refs.fsx = Deployment\refs.fsx
+	Deployment\ServiceManifest.json = Deployment\ServiceManifest.json
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B308305A-5B16-4EFF-8E7A-43B2CBD454AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B308305A-5B16-4EFF-8E7A-43B2CBD454AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B308305A-5B16-4EFF-8E7A-43B2CBD454AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B308305A-5B16-4EFF-8E7A-43B2CBD454AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

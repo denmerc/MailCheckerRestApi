@@ -1,0 +1,9 @@
+﻿{
+  "installDir": "c:\\prod\\MailTester",
+  "serviceName": "MailTester",
+  "serviceUser": "NT AUTHORITY\\NETWORK SERVICE",
+  "urlAcls": [
+    "http://+:8285/MailTester"
+  ],
+  "exeName": "MailTester.exe"
+}

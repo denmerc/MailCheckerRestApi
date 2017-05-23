@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RIDER_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../../build.cmd" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../build.fsx" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Deployment/deploy.nuspec" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Deployment/deployService.fsx" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Deployment/refs.fsx" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Deployment/ServiceManifest.json" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../MailTester" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../paket.dependencies" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MailTester/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MailTester/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../packages" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
