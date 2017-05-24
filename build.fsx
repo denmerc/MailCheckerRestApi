@@ -36,14 +36,14 @@ Target "CopyBinaries" (fun _ ->
 Target "BuildAll" DoNothing
 
 let packFakeDeploy () =
-  XCopyHelper.XCopy (__SOURCE_DIRECTORY__ @@ "packages" @@ "build" @@ "FSharp.Data" @@ "lib" @@ "net40") (buildDir @@ "_deploy" @@ "packages" @@ "FSharp.Data")
-  XCopyHelper.XCopy (__SOURCE_DIRECTORY__ @@ "packages" @@ "build" @@ "FAKE" @@ "tools") (buildDir @@ "_deploy" @@ "packages" @@ "FAKE")
-  (__SOURCE_DIRECTORY__ @@ "Deployment" @@ "_deploy" @@ "deployService.fsx") |> CopyFile (buildDir @@ "deploy.fsx")
-  (__SOURCE_DIRECTORY__ @@ "Deployment" @@ "_deploy" @@ "ServiceManifest.json") |> CopyFile (buildDir @@ "ServiceManifest.json")
+  XCopyHelper.XCopy (__SOURCE_DIRECTORY__ @@ "packages" @@ "build" @@ "FSharp.Data" @@ "lib" @@ "net40") (buildDir @@ "packages" @@ "FSharp.Data")
+  XCopyHelper.XCopy (__SOURCE_DIRECTORY__ @@ "packages" @@ "build" @@ "FAKE" @@ "tools") (buildDir @@ "packages" @@ "FAKE")
+  (__SOURCE_DIRECTORY__ @@ "Deployment" @@ "deployService.fsx") |> CopyFile (buildDir @@ "deploy.fsx")
+  (__SOURCE_DIRECTORY__ @@ "Deployment" @@ "ServiceManifest.json") |> CopyFile (buildDir @@ "ServiceManifest.json")
 
   WriteFile (buildDir @@ "refs.fsx")
-    [ """#r @"_deploy/packages/FAKE/FakeLib.dll" """
-      """#r @"_deploy/packages/FSharp.Data/FSharp.Data.dll" """ ]
+    [ """#r @"packages/FAKE/FakeLib.dll" """
+      """#r @"packages/FSharp.Data/FSharp.Data.dll" """ ]
   NuGet (
     fun p ->
       { p with
@@ -57,8 +57,9 @@ let packFakeDeploy () =
           Publish = false
           Files =
             [
-              "MailTester/**", Some "/", None
-              "_deploy/**", Some "/", None
+              "**", Some "/", None
+              //"MailTester/**", Some "/", None
+              //"_deploy/**", Some "/", None
             ]
           Dependencies = [ ]
         })
