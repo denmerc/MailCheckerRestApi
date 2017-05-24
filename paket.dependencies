@@ -7,7 +7,7 @@ source https://api.nuget.org/v3/index.json
 nuget FSharp.Core
 nuget Topshelf.FSharp
 nuget BouncyCastle
-nuget Suave.Swagger
+nuget Suave.Swagger >= 2.0.1 prerelease 
 nuget ARSoft.Tools.Net
 nuget Suave
 
